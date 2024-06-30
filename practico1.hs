@@ -1,17 +1,17 @@
---Practico 1--
+{-Practico 1-}
 
 --Ejercicio 3-- 
 {-Utilizando las funciones hd y tail, y dada la lista “hola mundo”, obtenga
 el segundo elemento de la misma (la letra “o”).-}
 
-head(tail ['h','o','l','a','m','u','n','d','o']) --Escribiendo esto tal cual en la terminal
+-- head( tail ['h','o','l','a','m','u','n','d','o']) --Escribiendo esto tal cual en la terminal
 
 --Ejercicio 4
 
 {-Utilizando las funciones hd y reverse, y dada la lista “hola mundo”,
 obtenga el ultimo elemento de la misma (la letra “o”).-}
 
-head (reverse ['h','o','l','a','m','u','n','d','o'])
+--head (reverse ['h','o','l','a','m','u','n','d','o']) --Escribiendo esto tal cual en la terminal
 
 --Ejercicio 5
 
@@ -19,21 +19,21 @@ head (reverse ['h','o','l','a','m','u','n','d','o'])
 determine si un numero, representado como la lista de sus dıgitos (ej: 123
 = [1,2,3]) es par.-}
 
-(head (reverse [1,2,3]) `mod` 2) == 0
+--(head (reverse [1,2,3]) `mod` 2) == 0 --Escribiendo esto tal cual en la terminal
 
 --Ejercicio 6
 
 {-Utilizando la funcion sum1, la funcion mod y un numero representado de
 igual manera que en el [ item 5 ] determine si un numero es multiplo de 3.-}
 
-((sum [1,2,3] `mod` 3) == 0 )  --Suponiendo que queremos saber si el 6 es multiplo de 3 ya que [1,2,3] = 1 + 2 + 3 = 6 mod 3 =? 0 
+--((sum [1,2,3] `mod` 3) == 0 )  --Suponiendo que queremos saber si el 6 es multiplo de 3 ya que [1,2,3] = 1 + 2 + 3 = 6 mod 3 =? 0 
 
 --Ejercicio 7
 
 {-Utilizando las funciones de los [ items 5, 6 ] determine si un numero es
 multiplo de 6-}
 
-((((head(reverse a) `mod` 2)) && (sum(a) `mod` 3) == 0))
+--((((head(reverse a) `mod` 2)) && (sum(a) `mod` 3) == 0)) --Escribiendo esto tal cual en la terminal
 
 --Ejercicio 8
 
@@ -77,7 +77,7 @@ drop 3 "0123456" elimina los primeros 3 caracteres, resultando en "3456".
 head "3456" toma el primer carácter de esa cadena, que es '3'.
 Por lo tanto, el resultado de la expresión head . (drop 3) "0123456" es '3'.-}
 
-(head.(drop 3)) "0123456" --Devuelve 3
+--(head.(drop 3)) "0123456" --Devuelve 3 
 
 --El tipo de valor es numerico
 
