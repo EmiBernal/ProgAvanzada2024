@@ -17,10 +17,10 @@ milast :: [a] -> a
 milast (x:xs) = hd(reverse xs)
 
 --Retorna toda la lista menos el ultimo elemento
-miinit :: [a] -> [a]
+miinit :: [a] -> [a]kl-
 miinit [x] = []     
 miinit (x:xs) = x : miinit(xs)
 
---Definicion de miPow(teorico)
-mipow :: Int -> Int
-mipow x = if x == 0 then 1 else 2*mipow(x-1)
+
+
+
