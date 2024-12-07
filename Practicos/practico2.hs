@@ -110,3 +110,4 @@ soloprimos xs = [x | x <- xs, esprimo x]
 palindromo :: (Eq a) => [a] -> Bool
 palindromo xs = xs == reverse xs
 
+{-Actividad 13-}
