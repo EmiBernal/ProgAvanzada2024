@@ -1,3 +1,4 @@
+import Control.Arrow (ArrowChoice(right))
 --Definicion de miPow(teorico)
 mipow :: Int -> Int
 mipow x = if x == 0 then 1 else 2*mipow(x-1)
@@ -64,3 +65,12 @@ isEven a = if a `mod` 2 == 0 then True else False
 
 removeNonUppercase :: String -> String
 removeNonUppercase st = [c | c <- st, c `elem` ['A'..'Z']]
+
+--QuickSort 
+
+quickSort :: Ord a => [a] -> [a]
+quickSort [] = []
+quickSort (x:xs) = quickSort left ++ [x] ++ quickSort right
+  where 
+    left = [a | a <- xs, a <= x]
+    right = [b | b <- xs, b > x]

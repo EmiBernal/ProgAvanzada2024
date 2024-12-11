@@ -111,11 +111,39 @@ divisoresLista n = [x | x <- [1..n], n `mod` x == 0]
 
 {-Actividad 18-}
 
-todosOcurrenEn :: (Eq a) => [a] -> [a] -> Bool
-todosOcurrenEn xs ys =  null [x| x <- xs,  x `notElem` ys] 
+--todosOcurrenEn :: (Eq a) => [a] -> [a] -> Bool
+--todosOcurrenEn xs ys =  null [x| x <- xs,  x `notElem` ys] 
 
 --Null verifica si la lista esta vacia, si fuera ese el caso, devuelve true
 
 {-Actividad 19-}
 
 numerosPrimos :: Int -> [Int]
+numerosPrimos n = [x | x <- [2..n], x `mod` 2 == 0]
+
+{-Actividad 20-}
+
+productoCart :: [Int] -> [Int] -> [(Int,Int)]
+productoCart xs ys = [(x,y)| x <- xs, y <- ys]
+
+{-Actividad 21-}
+
+ocurrencias :: (Eq a) => [a] -> a -> Int
+ocurrencias ys y = length[x | x <- ys, x == y]
+
+{-Actividad 22-}
+
+split2 :: [a] -> [([a],[a])]
+split2 xs = [(take i xs, drop i xs) | i <- [0..length xs]]
+
+{-Actividad 23-}
+
+segmenInit :: [a] -> [[a]]
+segmenInit xs = [(take i xs) | i <- [0..length xs]]
+
+sumaSegmentInit :: [Int] -> Int
+sumaSegmentInit xs = foldr (+) 0 (map sum (segmenInit xs))
+
+{-Actividad 24-}
+
+lisInfPares = [x | x <- [0..], even x]
