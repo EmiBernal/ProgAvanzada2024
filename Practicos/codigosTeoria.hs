@@ -74,3 +74,8 @@ quickSort (x:xs) = quickSort left ++ [x] ++ quickSort right
   where 
     left = [a | a <- xs, a <= x]
     right = [b | b <- xs, b > x]
+
+--Definicion de concat
+myconcat :: [a] -> [a] -> [a]
+myconcat [] ys = ys
+myconcat (x:xs) (y:ys) = x : myconcat xs ys
