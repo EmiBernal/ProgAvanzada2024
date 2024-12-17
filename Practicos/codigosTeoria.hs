@@ -1,4 +1,5 @@
 import Control.Arrow (ArrowChoice(right))
+import GHC.Real (infinity)
 --Definicion de miPow(teorico)
 mipow :: Int -> Int
 mipow x = if x == 0 then 1 else 2*mipow(x-1)
@@ -79,3 +80,12 @@ quickSort (x:xs) = quickSort left ++ [x] ++ quickSort right
 myconcat :: [a] -> [a] -> [a]
 myconcat [] ys = ys
 myconcat (x:xs) (y:ys) = x : myconcat xs ys
+
+--Definicion de reversa
+myreversa :: [a] -> [a]
+myreversa [] = []
+myreversa (x:xs) = myreversa xs ++ [x]
+
+m :: (Ord a, Num a, Floating a) => [a] -> a
+m [] = 1/0
+m (x:xs) = min x (m xs)
